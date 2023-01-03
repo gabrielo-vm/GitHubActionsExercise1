@@ -1,0 +1,9 @@
+name: Handle issues 
+#trigger on push
+on: issues
+jobs:
+  output-info: 
+    runs-on: macos-12
+    steps: 
+      - name: Get event details
+        run: echo "${{ toJSON(github.event) }}"
