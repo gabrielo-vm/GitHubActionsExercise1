@@ -12,6 +12,7 @@ jobs:
       - name: Run Lint
         run: npm run lint 
   test:
+    needs: lint
     runs-on: macos-12
     steps: 
       - name: Get code
